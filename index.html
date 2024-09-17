@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Assignment</title>
+</head>
+<body>
+    <h1>Basic Form Example</h1>
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <br><br>
+
+        <fieldset>
+            <legend>Gender:</legend>
+            <label for="male">
+                <input type="radio" id="male" name="gender" value="male">
+                Male
+            </label>
+            <br>
+            <label for="female">
+                <input type="radio" id="female" name="gender" value="female">
+                Female
+            </label>
+            <br>
+            <label for="other">
+                <input type="radio" id="other" name="gender" value="other">
+                Other
+            </label>
+        </fieldset>
+        <br>
+
+        <label for="subscribe">
+            <input type="checkbox" id="subscribe" name="subscribe" value="newsletter">
+            Subscribe to newsletter
+        </label>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
