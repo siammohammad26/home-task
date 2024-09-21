@@ -1,47 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Assignment</title>
-</head>
-<body>
-    <h1>Basic Form Example</h1>
-    <form action="#" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-        <br><br>
+def manage_courses():
+ courses = {
+       "CSE101": {"Course name": "Introduction to Programming", "Credits": 3, "Instructor": "Dr. Alice"},
+       "CSE102": {"Course name": "Data Structures", "Credits": 4, "Instructor": "Dr. Bob"},
+       "CSE103": {"Course name": "Database Systems", "Credits": 3, "Instructor": "Dr. Carol"}
+    }
+ 
+     courses["CSE102"]["Instructor"] = "Dr. Bob Jr."
+ 
+    courses["CSE104"] = {"Course name": "Algorithms", "Credits": 4, "Instructor": "Dr. Dave"}
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password" required>
-        <br><br>
-
-        <fieldset>
-            <legend>Gender:</legend>
-            <label for="male">
-                <input type="radio" id="male" name="gender" value="male">
-                Male
-            </label>
-            <br>
-            <label for="female">
-                <input type="radio" id="female" name="gender" value="female">
-                Female
-            </label>
-            <br>
-            <label for="other">
-                <input type="radio" id="other" name="gender" value="other">
-                Other
-            </label>
-        </fieldset>
-        <br>
-
-        <label for="subscribe">
-            <input type="checkbox" id="subscribe" name="subscribe" value="newsletter">
-            Subscribe to newsletter
-        </label>
-        <br><br>
-
-        <button type="submit">Submit</button>
-    </form>
-</body>
-</html>
+    if "CSE101" in courses:
+        del courses["CSE101"]
+ 
+    for code, details in courses.items():
+        print(f"Course Code: {code}")
+        for key, value in details.items():
+            print(f" {key}: {value}")
+             print()
+manage_courses()
